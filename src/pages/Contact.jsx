@@ -6,17 +6,81 @@ const initialForm = { name: '', email: '', phone: '', service: '', message: '' }
 
 function Contact() {
   const [form, setForm] = useState(initialForm)
-  const [submitted, setSubmitted] = useState(false)
+  const [status, setStatus] = useState({ type: '', message: '' })
+  const [loading, setLoading] = useState(false)
 
   const handleChange = (e) => {
     const { name, value } = e.target
     setForm((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e) => {
+  // Build a formatted message string from form data for WhatsApp
+  const buildWhatsAppText = () => {
+    const lines = [
+      `New Enquiry from ${form.name}`,
+      '',
+      `Name: ${form.name}`,
+      `Phone: ${form.phone}`,
+      `Email: ${form.email}`,
+      `Service: ${form.service || 'Not specified'}`,
+      `Message: ${form.message || 'N/A'}`,
+    ]
+    return encodeURIComponent(lines.join('\n'))
+  }
+
+  // Send via WhatsApp — opens WhatsApp with pre-filled message (100% free)
+  const handleWhatsApp = (e) => {
     e.preventDefault()
-    setSubmitted(true)
-    setForm(initialForm)
+    if (!form.name || !form.phone) {
+      setStatus({ type: 'error', message: 'Please fill in at least your name and phone number.' })
+      return
+    }
+    const url = `https://wa.me/${brand.whatsapp}?text=${buildWhatsAppText()}`
+    window.open(url, '_blank')
+    setStatus({ type: 'success', message: 'Opening WhatsApp with your message pre-filled. Just hit send!' })
+  }
+
+  // Send via Email using FormSubmit.co (free, no signup required)
+  const handleEmail = async (e) => {
+    e.preventDefault()
+    setLoading(true)
+    setStatus({ type: '', message: '' })
+
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${brand.email}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          service: form.service,
+          message: form.message,
+          _subject: `New Enquiry from ${form.name} - Santhiya Makeovers`,
+          _template: 'table',
+        }),
+      })
+
+      if (response.ok) {
+        setStatus({
+          type: 'success',
+          message: "Thank you! Your message has been sent. We'll get back to you shortly.",
+        })
+        setForm(initialForm)
+      } else {
+        throw new Error('Failed to send email')
+      }
+    } catch (error) {
+      setStatus({
+        type: 'error',
+        message: 'Sorry, something went wrong. Please try WhatsApp or call us directly.',
+      })
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -61,13 +125,20 @@ function Contact() {
             <div className="col-lg-7">
               <div className="contact-form-card">
                 <h4 className="mb-4">Send Us a Message</h4>
-                {submitted && (
-                  <div className="alert alert-success" role="alert">
-                    <i className="bi bi-check-circle-fill me-2"></i>
-                    Thank you! Your message has been noted. We&apos;ll get back to you shortly.
+                {status.message && (
+                  <div
+                    className={`alert ${status.type === 'success' ? 'alert-success' : 'alert-danger'}`}
+                    role="alert"
+                  >
+                    <i className={`bi ${status.type === 'success' ? 'bi-check-circle-fill' : 'bi-exclamation-circle-fill'} me-2`}></i>
+                    {status.message}
                   </div>
                 )}
-                <form onSubmit={handleSubmit}>
+                <p className="text-muted small mb-3">
+                  <i className="bi bi-info-circle me-1"></i>
+                  Choose how you&apos;d like to send your enquiry — WhatsApp for instant chat, or Email for a detailed message.
+                </p>
+                <form>
                   <div className="row g-3">
                     <div className="col-md-6">
                       <label className="form-label" htmlFor="name">Full Name</label>
@@ -138,9 +209,26 @@ function Contact() {
                         placeholder="Tell us about your event and requirements..."
                       ></textarea>
                     </div>
-                    <div className="col-12">
-                      <button type="submit" className="btn btn-gold btn-lg px-5">
-                        Send Message
+                    <div className="col-12 d-flex flex-wrap gap-3">
+                      <button
+                        type="button"
+                        onClick={handleWhatsApp}
+                        className="btn btn-whatsapp btn-lg px-4"
+                      >
+                        <i className="bi bi-whatsapp me-2"></i>
+                        Send via WhatsApp
+                      </button>
+                      <button
+                        type="button"
+                        onClick={handleEmail}
+                        disabled={loading}
+                        className="btn btn-gold btn-lg px-4"
+                      >
+                        {loading ? (
+                          <><span className="spinner-border spinner-border-sm me-2"></span>Sending...</>
+                        ) : (
+                          <><i className="bi bi-envelope-paper me-2"></i>Send via Email</>
+                        )}
                       </button>
                     </div>
                   </div>
