@@ -1,7 +1,6 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import PageBanner from '../components/PageBanner'
-import IconTile from '../components/IconTile'
 import { galleryCategories, galleryItems } from '../data/siteData'
 
 function Gallery() {
@@ -39,7 +38,15 @@ function Gallery() {
             {filteredItems.map((item) => (
               <div className="col-6 col-md-4 col-lg-3" key={item.id}>
                 <div className="gallery-card">
-                  <IconTile icon={item.icon} label={item.title} size="lg" />
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="gallery-card-img"
+                    loading="lazy"
+                  />
+                  <span className="gallery-card-icon">
+                    <i className={`bi ${item.icon}`}></i>
+                  </span>
                   <div className="gallery-card-overlay">
                     <span className="badge-category">{item.category}</span>
                     <strong>{item.title}</strong>

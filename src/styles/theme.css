@@ -486,6 +486,18 @@ a {
   overflow: hidden;
 }
 
+.gallery-preview-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-preview-card:hover .gallery-preview-img {
+  transform: scale(1.08);
+}
+
 .gallery-preview-caption {
   position: absolute;
   inset: auto 0 0 0;
@@ -536,12 +548,33 @@ a {
   cursor: pointer;
 }
 
-.gallery-card .icon-tile {
+.gallery-card-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
   transition: transform 0.4s ease;
 }
 
-.gallery-card:hover .icon-tile {
+.gallery-card:hover .gallery-card-img {
   transform: scale(1.08);
+}
+
+.gallery-card-icon {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  font-size: 1.2rem;
+  z-index: 2;
 }
 
 .gallery-card-overlay {

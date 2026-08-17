@@ -148,21 +148,33 @@ export const testimonials = [
   },
 ]
 
+import sareeDraping from '../assets/gallery/saree-draping.jpg'
+import sareePleating from '../assets/gallery/saree-pleating.jpeg'
+import sareePleatingSanthiya from '../assets/gallery/saree-pleating-santhiya.jpeg'
+import sareePleating1 from '../assets/gallery/saree-pleating1.jpeg'
+import sareePlepleating from '../assets/gallery/saree-plepleating.jpeg'
+import casualMakeup from '../assets/gallery/casual-makeup.jpeg'
+import nonBridalMakeup from '../assets/gallery/non-bridal-makeup.jpeg'
+import partyMakeup from '../assets/gallery/party-makeup.jpeg'
+import hairStyle from '../assets/gallery/hair-style.jpeg'
+import kidsHairStyle from '../assets/gallery/kids-hair-style.jpeg'
+import kidsMakeup from '../assets/gallery/kids-makeup.jpeg'
+
 export const galleryItems = [
-  { id: 1, category: 'Draping', icon: 'bi-flower2', title: 'Silk Saree Draping' },
-  { id: 2, category: 'Draping', icon: 'bi-gem', title: 'Half-Saree Draping' },
-  { id: 3, category: 'Bridal', icon: 'bi-gem', title: 'Classic Bridal Look' },
-  { id: 4, category: 'Bridal', icon: 'bi-flower1', title: 'Temple Jewellery Bride' },
-  { id: 5, category: 'Party', icon: 'bi-stars', title: 'Reception Glam' },
-  { id: 6, category: 'Party', icon: 'bi-sparkle', title: 'Engagement Glow' },
-  { id: 7, category: 'Hair', icon: 'bi-scissors', title: 'Bridal Braided Bun' },
-  { id: 8, category: 'Hair', icon: 'bi-wind', title: 'Soft Curls Updo' },
-  { id: 9, category: 'Skin', icon: 'bi-flower1', title: 'Pre-Bridal Glow Facial' },
-  { id: 10, category: 'Mehendi', icon: 'bi-flower3', title: 'Bridal Mehendi Art' },
-  { id: 11, category: 'Bridal', icon: 'bi-gem', title: 'Contemporary Bride' },
-  { id: 12, category: 'Party', icon: 'bi-stars', title: 'Sangeet Night Look' },
-  { id: 13, category: 'Hair', icon: 'bi-wind', title: 'Traditional Half-Up' },
-  { id: 14, category: 'Mehendi', icon: 'bi-flower3', title: 'Arabic Mehendi Design' },
+  { id: 1, category: 'Draping', icon: 'bi-flower2', title: 'Silk Saree Draping', image: sareeDraping },
+  { id: 2, category: 'Draping', icon: 'bi-gem', title: 'Half-Saree Draping', image: sareePleating },
+  { id: 3, category: 'Bridal', icon: 'bi-gem', title: 'Classic Bridal Look', image: nonBridalMakeup },
+  { id: 4, category: 'Bridal', icon: 'bi-flower1', title: 'Temple Jewellery Bride', image: sareePleatingSanthiya },
+  { id: 5, category: 'Party', icon: 'bi-stars', title: 'Reception Glam', image: partyMakeup },
+  { id: 6, category: 'Party', icon: 'bi-sparkle', title: 'Engagement Glow', image: casualMakeup },
+  { id: 7, category: 'Hair', icon: 'bi-scissors', title: 'Bridal Braided Bun', image: hairStyle },
+  { id: 8, category: 'Hair', icon: 'bi-wind', title: 'Soft Curls Updo', image: kidsHairStyle },
+  { id: 9, category: 'Skin', icon: 'bi-flower1', title: 'Pre-Bridal Glow Facial', image: kidsMakeup },
+  { id: 10, category: 'Mehendi', icon: 'bi-flower3', title: 'Bridal Mehendi Art', image: sareePleating1 },
+  { id: 11, category: 'Bridal', icon: 'bi-gem', title: 'Contemporary Bride', image: sareePlepleating },
+  { id: 12, category: 'Party', icon: 'bi-stars', title: 'Sangeet Night Look', image: partyMakeup },
+  { id: 13, category: 'Hair', icon: 'bi-wind', title: 'Traditional Half-Up', image: hairStyle },
+  { id: 14, category: 'Mehendi', icon: 'bi-flower3', title: 'Arabic Mehendi Design', image: sareePleating },
 ]
 
 export const galleryCategories = ['All', 'Draping', 'Bridal', 'Party', 'Hair', 'Skin', 'Mehendi']

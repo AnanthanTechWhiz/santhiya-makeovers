@@ -138,7 +138,12 @@ function Home() {
             {galleryItems.slice(0, 8).map((item) => (
               <div className="col-6 col-md-3" key={item.id}>
                 <div className="gallery-preview-card">
-                  <IconTile icon={item.icon} label={item.title} size="lg" />
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="gallery-preview-img"
+                    loading="lazy"
+                  />
                   <div className="gallery-preview-caption">
                     <span>{item.category}</span>
                     <strong>{item.title}</strong>
