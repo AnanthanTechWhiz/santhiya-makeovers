@@ -2,7 +2,6 @@
   "name": "santhiya-makeovers",
   "private": true,
   "version": "0.0.0",
-  "requires": true,
   "homepage": "https://ananthantechwhiz.github.io/santhiya-makeovers",
   "type": "module",
   "scripts": {
@@ -11,15 +10,15 @@
     "lint": "oxlint",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "node scripts/deploy-main.cjs"
+    "deploy": "gh-pages -d dist",
+    "postbuild": "node -e \"require('fs').copyFileSync('dist/index.html','dist/404.html')\""
   },
   "dependencies": {
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "react-router-dom": "^7.18.2",
-    "gh-pages": "^6.1.1"
+    "react-router-dom": "^7.18.2"
   },
   "devDependencies": {
     "@types/react": "^19.2.17",
