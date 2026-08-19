@@ -16,7 +16,7 @@ function Home() {
           <div className="row align-items-center gy-5">
             <div className="col-lg-6">
               <span className="eyebrow">
-                <i className="bi bi-stars me-2"></i>Premium Makeup Studio
+                <i className="bi bi-stars me-2"></i>Premium Makeup & Styling Services
               </span>
               <h1 className="hero-title">
                 Look Radiant. <span className="text-gold">Feel Confident.</span> Every Occasion.
