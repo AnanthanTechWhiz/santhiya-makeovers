@@ -59,17 +59,6 @@ export const services = [
       'A signature non-bridal experience combining long-lasting airbrush makeup, trial sessions, and personalised looks that photograph beautifully in every light.',
     features: ['Pre-event consultation', 'Airbrush finish', 'Trial session included', 'Touch-up kit on the day'],
   },
-    {
-    id: 'Draping',
-    icon: 'bi-flower2',
-    title: 'Saree & Draping',
-    price: 'From ₹500',
-    short: 'Traditional & contemporary draping styles — our specialty.',
-    description:
-      'Expert draping for sarees, half-sarees and dupattas in traditional and modern styles that hold beautifully through the celebrations.',
-    features: ['15+ drape styles', 'Pinning & pleating', 'Dupatta styling', 'Quick touch-ups'],
-  },
-  
   {
     id: 'Party-makeup',
     icon: 'bi-stars',
@@ -80,7 +69,8 @@ export const services = [
       'Bold or subtle, we tailor party makeup to your outfit and the occasion — perfect for engagements, sangeet, receptions and festive celebrations.',
     features: ['Custom glam styling', 'Long-wear formulas', 'False lashes included', 'On-location service'],
   },
-  {
+
+    {
     id: 'Hair-styling',
     icon: 'bi-scissors',
     title: 'Hair Styling',
@@ -90,7 +80,17 @@ export const services = [
       'From soft curls to intricate bridal buns, our stylists craft hairstyles that complement your face shape, outfit and theme perfectly.',
     features: ['Bridal updos & braids', 'Hair accessories styling', 'Keratin blowouts', 'Trial available'],
   },
-  
+    {
+    id: 'Draping',
+    icon: 'bi-flower2',
+    title: 'Saree Draping',
+    price: 'From ₹500',
+    short: 'Traditional & contemporary draping styles — our specialty.',
+    description:
+      'Expert draping for sarees, half-sarees and dupattas in traditional and modern styles that hold beautifully through the celebrations.',
+    features: ['15+ drape styles', 'Pinning & pleating', 'Dupatta styling', 'Quick touch-ups'],
+  },
+    
   {
     id: 'Saree Pre-pleating',
     icon: 'bi-flower2',

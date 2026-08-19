@@ -190,11 +190,11 @@ function Contact() {
                       >
                         <option value="">Select a service</option>
                         <option>Bridal Makeup</option>
+                        <option>Non-Bridal Makeup</option>
                         <option>Party & Event Makeup</option>
                         <option>Hair Styling</option>
-                        <option>Skin Care & Facials</option>
-                        <option>Saree & Draping</option>
-                        <option>Mehendi Art</option>
+                        <option>Saree Draping</option>
+                        <option>Saree Pre-Pleating</option>
                       </select>
                     </div>
                     <div className="col-12">
