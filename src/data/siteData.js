@@ -106,46 +106,46 @@ export const services = [
 
 export const testimonials = [
   {
-    name: 'Priya Ramesh',
-    role: 'Bride, Bengaluru',
+    name: 'Nutan bala',
+    role: 'Saree, Bengaluru',
     rating: 5,
     quote:
-      'Santhiya made me feel like a queen on my wedding day! The makeup stayed flawless for over 12 hours through all the rituals.',
+      'Santhiya has done the pleating very nicely. Wearing this by myself is usually very difficult for me, but after she pleated it, it became very easy to wear. Her neat and careful pleating made the whole process much simpler and more comfortable. I really appreciate the effort she put in, because it saved me a lot of time and difficulty.Thank you so much, Santhiya, for taking the time and effort to do it so nicely. I truly appreciate your help and kindness.',
   },
   {
-    name: 'Divya Karthik',
-    role: 'Bride, Whitefield',
+    name: 'Joyce Rodriguez',
+    role: 'Full Makeup, Hoskote, Bengaluru',
     rating: 5,
     quote:
-      'The trial session helped me choose the perfect look. Every guest complimented my hairstyle and draping — absolutely worth it!',
+      'I had availed Santhiya’s services for Saree draping, hair, and makeup. She is very professional, punctual, and on time, and I am happy with all three services. Shes very skilled, neat, and accurate, No rework needed once something is done.',
   },
   {
-    name: 'Anitha Suresh',
-    role: 'Reception Guest, Bengaluru',
+    name: 'Aparna Pradhan',
+    role: 'Guest, Bengaluru',
     rating: 5,
     quote:
-      'I booked party makeup for my sister\'s reception and it was stunning. Professional, punctual, and so friendly throughout.',
+      'Had a great experience, she understands the requirements well and gave me as promised results.. Got nicely pleated saree.',
   },
   {
-    name: 'Meera Prakash',
-    role: 'Bride, Bommenahalli',
+    name: 'Sumeet Behl',
+    role: 'Traveler, Bommenahalli',
     rating: 5,
     quote:
-      'From the pre-bridal facials to the big day, the entire journey was seamless. My skin has never glowed this much!',
+      'I got the saree pre-pleating service done for my wife, and the experience was excellent. The pleats were perfectly done, neat, and made it so easy for her to drape the saree quickly. She looked gorgeous, and it saved us a lot of time during the event. I’m really happy with the quality of the work and highly recommend this service to anyone looking for a convenient and flawless saree drape.',
   },
   {
-    name: 'Lakshmi Narayan',
-    role: 'Sangeet Bride, Bengaluru',
+    name: 'Nabha Purohit',
+    role: 'Model, Bengaluru',
     rating: 5,
     quote:
-      'The mehendi artist was incredibly talented — intricate designs that lasted beautifully dark for weeks. Highly recommend!',
+      'Santhiya was very professional and I loved the way she draped my saree according to my preference and taste. Would highly recommend her.',
   },
   {
-    name: 'Kavya Ashwin',
-    role: 'Engagement Bride, Bengaluru',
+    name: 'Jyothirmaie Reddy',
+    role: 'Party Guest, Bengaluru',
     rating: 5,
     quote:
-      'Booking was easy, the studio is gorgeous, and the draping and makeup exceeded my expectations. Santhiya Makeovers is simply the best around.',
+      'I recently got my saree pleated and draped by Santhiya, and I absolutely loved her work! The pleats were perfectly neat, the drape stayed intact throughout the event, and she made the entire process so easy and comfortable. Her attention to detail and professional approach truly stand out. Highly professional and reliable service.',
   },
 ]
 
