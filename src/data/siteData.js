@@ -28,6 +28,7 @@ export const socialLinks = [
   { name: 'YouTube', icon: 'bi-youtube', href: 'http://www.youtube.com/@SanthiyaAnanthan_offical' },
   { name: 'LinkedIn', icon: 'bi-linkedin', href: 'https://www.linkedin.com/in/santhiya-a-makeup-artist' },
   { name: 'WhatsApp', icon: 'bi-whatsapp', href: 'https://wa.me/917639139516' },
+  { name: 'X', icon: 'bi-x', href: 'https://x.com/SanthiyaMUA' },
 ]
 
 export const navLinks = [
