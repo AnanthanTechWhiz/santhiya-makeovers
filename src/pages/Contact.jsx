@@ -195,6 +195,7 @@ function Contact() {
                         <option>Hair Styling</option>
                         <option>Saree Draping</option>
                         <option>Saree Pre-Pleating</option>
+                        <option>Others</option>
                       </select>
                     </div>
                     <div className="col-12">

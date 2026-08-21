@@ -1,5 +1,5 @@
 export const brand = {
-  name: 'Santhiya Makeovers',
+  name: 'Santhiya Elegance',
   legalName: 'Santhiya Saree Draping, Makeup & Hairstyle Services',
   tagline: 'Where Every Face Tells a Beautiful Story',
   phone: '+91 7639139516',
