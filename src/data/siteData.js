@@ -6,6 +6,16 @@ export const brand = {
   whatsapp: '917639139516',
   email: 'santhiya.ananthan94@gmail.com',
   address: '#9025, Prestige Tranquility, Bommenahalli Village, Karnataka, India 560049',
+  addresses: [
+    {
+      name: 'Santhiya Elegance',
+      address: '#9025, Prestige Tranquility, Bommenahalli Village, Karnataka, India 560049',
+    },
+    {
+      name: 'Santhiya Elegance',
+      address: '316B, Road Street, Ramapuram Village, Semmambadi Post, Chetpet Taluk, Ramapuram to Namathodu Link Road, Tiruvannmalai Dist, Tamil Nadu 632313',
+    },
+  ],
   googleMapsUrl: 'https://maps.app.goo.gl/ftmt6W2BiPqaWbfx8',
   rating: 5.0,
   category: 'Make-up Artist',

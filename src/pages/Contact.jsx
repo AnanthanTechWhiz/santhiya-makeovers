@@ -98,7 +98,12 @@ function Contact() {
               <div className="contact-info-card text-center">
                 <i className="bi bi-geo-alt-fill"></i>
                 <h6>Visit Us</h6>
-                <p className="text-muted small mb-0">{brand.address}</p>
+                {brand.addresses.map((location, index) => (
+                  <p className={`text-muted small ${index === brand.addresses.length - 1 ? 'mb-0' : 'mb-3'}`} key={location.address}>
+                    <strong>{location.name}</strong><br />
+                    {location.address}
+                  </p>
+                ))}
               </div>
             </div>
             <div className="col-md-4">

@@ -61,7 +61,14 @@ function Footer() {
             <ul className="list-unstyled footer-links footer-contact">
               <li>
                 <i className="bi bi-geo-alt-fill"></i>
-                <span>{brand.address}</span>
+                <span>
+                  {brand.addresses.map((location, index) => (
+                    <span className="d-block" key={location.address}>
+                      {index > 0 && <br />}
+                      {location.address}
+                    </span>
+                  ))}
+                </span>
               </li>
               <li>
                 <i className="bi bi-telephone-fill"></i>
